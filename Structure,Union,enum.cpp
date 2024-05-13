@@ -1,30 +1,37 @@
-// #include<iostream>
-// using namespace std;
-// //*********Structures***********
-// //Structure ---> Structure is the user define data type. It is use to combine antities
-// //different types of items(int,float,char etc) because this is not possible in array.
-// // Structure tb bnate hai jb hum ek aesi user define data type bnana chate ho jis ke ander
-// // ki entities different data type ho.
-// typedef struct employee
-// {
-//     string name;
-//     int eid;
-//     float salary;
-//     char favChar;
-// } se; // if we want ke hr baar struct employee na likhna parhe tu usse phele typedef lga kr last mai jo name rakhna rakhlo
+#include<iostream>
+using namespace std;
+//*********Structures***********
+//Structure ---> Structure is the user define data type. It is use to combine antities
+//different types of items(int,float,char etc) because this is not possible in array.
+// Structure tb bnate hai jb hum ek aesi user define data type bnana chate ho jis ke ander
+// ki entities different data type ho.
+typedef struct employee
+{
+    string name;
+    int eid;
+    float salary;
+    char favChar;
+} se; // if we want ke hr baar struct employee na likhna parhe tu usse phele typedef lga kr last mai jo name rakhna rakhlo
 
-// int main() {
-//     se nabeed;
-//     nabeed.eid = 101;
-//     nabeed.name = "Nabeed Jamshed";
-//     nabeed.salary = 12000000.00;
-//     nabeed.favChar = 'n';
-//     cout<<"Name: "<<nabeed.name<<endl;
-//     cout<<"Student ID: "<<nabeed.eid<<endl;
-//     cout<<"Salary: "<<nabeed.salary<<endl;
-//     cout<<"Favourite character: "<<nabeed.favChar<<endl;
-
-// }
+void setdata(employee e1){
+    e1.eid = 12;
+    e1.salary = 2423;
+    e1.favChar = 'b';
+    e1.name = "Nabeed";
+}
+int main() {
+    // se nabeed;
+    // nabeed.eid = 101;
+    // nabeed.name = "Nabeed Jamshed";
+    // nabeed.salary = 12000000.00;
+    // nabeed.favChar = 'n';
+    // cout<<"Name: "<<nabeed.name<<endl;
+    // cout<<"Student ID: "<<nabeed.eid<<endl;
+    // cout<<"Salary: "<<nabeed.salary<<endl;
+    // cout<<"Favourite character: "<<nabeed.favChar<<endl;
+    employee na;
+    setdata(na);
+}
 // //******Union********
 // // union is just like a structure but it also provide better memory management
 // union money

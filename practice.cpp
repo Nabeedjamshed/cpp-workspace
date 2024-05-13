@@ -689,3 +689,54 @@
 //     cout<<dining.length.feet<<endl<<dining.length.inches<<endl<<dining.width.feet<<endl<<dining.width.inches<<endl;
 //     return 0;
 // }
+
+
+// #include<iostream>
+// using namespace std;
+
+// void sum(int *p1, int *p2){
+//     int c[5];
+//     int *s = c;
+//     for (int i = 0; i < 5; i++)
+//     {
+//         *s = *p1 + *p2;
+//         cout<<"The sum of "<<*p1<<" and "<<*p2<<" is "<<*s<<endl;
+//         *p1++;
+//         *p2++;
+//     }
+    
+// }
+// int main() {
+//     int a[5] = {1,3,5,7,9};
+//     int b[5] = {18,36,55,74,93};
+//     int *ptr1 = a;
+//     int *ptr2 = b;
+//     sum(ptr1,ptr2);
+//     return 0;
+// }
+
+
+#include<iostream>
+using namespace std;
+struct employee
+{
+    string name;
+    int eid;
+    float salary;
+    char favChar;
+};
+void setdata(employee e1){
+    e1.eid = 12;
+    e1.salary = 2423;
+    e1.favChar = 'b';
+    e1.name = "Nabeed";    
+    cout<<"Name: "<<e1.name<<endl;
+    cout<<"Student ID: "<<e1.eid<<endl;
+    cout<<"Salary: "<<e1.salary<<endl;
+    cout<<"Favourite character: "<<e1.favChar<<endl;
+
+}
+int main() {
+    employee na;
+    setdata(na);
+}

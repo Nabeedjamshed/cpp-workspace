@@ -9,7 +9,9 @@
         "iterator": "cpp",
         "fstream": "cpp",
         "*.tcc": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "typeinfo": "cpp",
+        "bitset": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

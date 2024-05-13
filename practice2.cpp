@@ -91,7 +91,6 @@
 //     return 0;
 // }
 
-
 // #include<iostream>
 // using namespace std;
 
@@ -121,73 +120,60 @@
 //     return 0;
 // }
 
-#include<iostream>
-#include<vector>
-#include<string>
-#include<cmath>
-using namespace std;
+// #include<iostream>
+// #include<vector>
+// #include<string>
+// #include<cmath>
+// using namespace std;
 
-int sum(vector <int> arr){
-    int sums = 0;
-    for (int i = 0; i < arr.size(); i++)
-    {
-        sums = sums + arr[i];
-    }
-    return sums;
-}
-int main() {
-    string days[7] = {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
-    vector <string> province_list;
-    vector<vector <int> >province_temperature;
-    vector <float> average;
-    for (int i = 0; i < 4; i++)
-    {
-        string province;
-        cout<<"Enter a name of a province: ";
-        cin>>province;
-        province_list.push_back(province);
-        vector <int> province_temp;
-        for(auto j:days){
-            int temp;
-            cout<<"Enter a temperature of "<<j<<": ";
-            cin>>temp;  
-            province_temp.push_back(temp);
-        }
-        province_temperature.push_back(province_temp);
-        float add,length;
-        add = sum(province_temp);
-        length = province_temp.size();
-        float avg = (add / length);
-        double avg_rounded= round(avg);
-        average.push_back(avg_rounded);
-    }
+// int sum(vector <int> arr){
+//     int sums = 0;
+//     for (int i = 0; i < arr.size(); i++)
+//     {
+//         sums = sums + arr[i];
+//     }
+//     return sums;
+// }
+// int main() {
+//     string days[7] = {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+//     vector <string> province_list;
+//     vector<vector <int> >province_temperature;
+//     vector <float> average;
+//     for (int i = 0; i < 4; i++)
+//     {
+//         string province;
+//         cout<<"Enter a name of a province: ";
+//         cin>>province;
+//         province_list.push_back(province);
+//         vector <int> province_temp;
+//         for(auto j:days){
+//             int temp;
+//             cout<<"Enter a temperature of "<<j<<": ";
+//             cin>>temp;
+//             province_temp.push_back(temp);
+//         }
+//         province_temperature.push_back(province_temp);
+//         float add,length;
+//         add = sum(province_temp);
+//         length = province_temp.size();
+//         float avg = (add / length);
+//         double avg_rounded= round(avg);
+//         average.push_back(avg_rounded);
+//     }
 
-    for (int i = 0; i < province_list.size(); i++)
-    {
-        cout<<endl;
-        cout<<province_list[i]<<endl;
-        cout<<"Temperature of a week"<<endl;
-        for(auto temp : province_temperature[i]){
-            cout<<temp<<" ";
-        }
-        cout<<endl;
-        cout<<"The average temp of " <<province_list[i]<< " in a week is: "<< average[i]<<endl;
-    }
-    return 0;
-}   
-
-
-
-
-
-
-
-
-
-
-
-
-
+//     for (int i = 0; i < province_list.size(); i++)
+//     {
+//         cout<<endl;
+//         cout<<province_list[i]<<endl;
+//         cout<<"Temperature of a week"<<endl;
+//         for(auto temp : province_temperature[i]){
+//             cout<<temp<<" ";
+//         }
+//         cout<<endl;
+//         cout<<"The average temp of " <<province_list[i]<< " in a week is: "<< average[i]<<endl;
+//     }
+//     return 0;
+// }
 
 // days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
 // province_list = []
@@ -214,3 +200,284 @@ int main() {
 //         print(temp,end=" ")
 //     print()
 //     print(f"The average temp of {province_list[i]} in a week is: {average[i]}.")
+
+// #include<iostream>
+// #include<cstdlib>
+// using namespace std;
+
+// int main() {
+//     string s;
+//     cin>>s;
+//     const char* c_str = s.c_str();
+//     int num = atoi(c_str);
+//     cout<<num<<endl;
+//     return 0;
+// }
+
+// #include<iostream>
+// #include<cstdlib>
+// using namespace std;
+// class Solution {
+// public:
+//     int myAtoi(string s) {
+//         string s1 = s;
+//         cin>>s1;
+//         const char* c_str = s1.c_str();
+//         int num = atoi(c_str);
+//         return num;
+//     }
+// };
+
+#include <iostream>
+using namespace std;
+void L2Q11_diamond(int size)
+{
+    const string red_font = "\033[31m";
+    const string white_font = "\033[0m";
+    int i, star_count;
+    if (size % 2 != 0)
+    {
+        for (i = 1; i <= (size / 2) + 1; ++i)
+        {
+            for (int k = 1; k <= (size - (2 * i) + 1) / 2; ++k)
+            {
+                cout << ' ';
+            }
+            if (i == 1)
+            {
+                cout << red_font << '*';
+            }
+            else
+            {
+                for (int j = 1; j <= (2 * i) - 1; ++j)
+                {
+                    cout << white_font << '*';
+                }
+            }
+            for (int k = 1; k <= (size - (2 * i) + 1) / 2; ++k)
+            {
+                cout << ' ';
+            }
+            cout << endl;
+        }
+        int star_count = size - 2;
+        while (star_count >= 1)
+        {
+            for (int k = 1; k <= (size - star_count) / 2; ++k)
+            {
+                cout << ' ';
+            }
+            if (star_count == 1)
+            {
+                cout << red_font << '*';
+            }
+            else
+            {
+                for (int j = 1; j <= star_count; ++j)
+                {
+                    cout << white_font << '*';
+                }
+            }
+            for (int k = 1; k <= (size - star_count) / 2; ++k)
+            {
+                cout << ' ';
+            }
+            cout << endl;
+            star_count -= 2;
+        }
+    }
+    else
+    {
+        for (i = 1; i <= size / 2; ++i)
+        {
+            for (int k = 1; k <= (size - (2 * i)) / 2; ++k)
+            {
+                cout << ' ';
+            }
+            if (i == 1)
+            {
+                cout << red_font << "";
+            }
+            else
+            {
+                for (int j = 1; j <= 2 * i; ++j)
+                {
+                    cout << white_font << '*';
+                }
+            }
+            for (int k = 1; k <= (size - (2 * i)) / 2; ++k)
+            {
+                cout << ' ';
+            }
+            cout << endl;
+        }
+        star_count = size;
+        while (star_count >= 1)
+        {
+            for (int k = 1; k <= (size - star_count) / 2; ++k)
+            {
+                cout << ' ';
+            }
+            if (star_count == 2)
+            {
+                cout << red_font << "";
+            }
+            else
+            {
+                for (int j = 1; j <= star_count; ++j)
+                {
+                    cout << white_font << '*';
+                }
+            }
+            for (int k = 1; k <= (size - star_count) / 2; ++k)
+            {
+                cout << ' ';
+            }
+            cout << endl;
+            star_count -= 2;
+        }
+    }
+}
+int main()
+{
+    L2Q11_diamond(9);
+    return 0;
+}
+
+// #include<iostream>
+// using namespace std;
+
+// void rectangle(int l) {
+// 	const string red_font = "\033[31m";
+// 	const string white_font = "\033[0m";
+// 	for (int i = 1; i <= l; ++i) {
+// 		if (i == 1 || i == l) {
+// 			for (int k = 1; k <= l; ++k)
+// 				cout << white_font << '*';
+// 			cout << endl;
+// 			continue;
+// 		}
+// 		for (int j = 1; j <= l; ++j) {
+// 			if (j == 1)
+// 				cout << red_font << '*';
+// 			else if (j == l)
+// 				cout << white_font << '*';
+// 			else
+// 				cout << ' ';
+// 		}
+// 		cout << endl;
+// 	}
+// }
+// int main() {
+//     rectangle(5);
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// void door(int size) {
+// 	const string red_font = "\033[31m";
+// 	const string white_font = "\033[0m";
+// 	for (int i = 1; i <= size / 2; ++i) {
+// 		for (int j = 1; j <= i; ++j) {
+// 			if (i == 1 && j == 1)
+// 				cout << red_font << '*';
+// 			else
+// 				cout << white_font << '*';
+// 		}
+// 		for (int k = 1; k <= size - (2 * i); ++k)
+// 			cout << ' ';
+// 		for (int j = 1; j <= i; ++j)
+// 			cout << white_font << '*';
+// 		cout << endl;
+// 	}
+// 	for (int j = 1; j <= size; ++j)
+// 		cout << white_font << '*';
+// 	cout << endl;
+// 	int star_count = (size - 1) / 2;
+// 	while (star_count >= 1) {
+// 		if (star_count == 1)
+// 			cout << red_font << '*';
+// 		else
+// 			for (int j = 1; j <= star_count; ++j)
+// 				cout << white_font << '*';
+// 		for (int j = 1; j <= (size - (star_count*2)); ++j)
+// 			cout << ' ';
+// 		for (int j = 1; j <= star_count; ++j)
+// 			cout << white_font << '*';
+// 		cout << endl;
+// 		star_count -= 1;
+// 	}
+// }
+// int main() {
+//     door(10);
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// void number_pattern(int size)
+// {
+//     for (int i = 1; i <= size; ++i)
+//     {
+//         for (int j = 1; j <= (size - i); ++j)
+//         {
+//             cout << ' ';
+//         }
+//         int j = i;
+//         while (j >= 1)
+//         {
+//             cout << j;
+//             j -= 1;
+//         }
+//         j = 2;
+//         while (j <= i)
+//         {
+//             cout << j;
+//             j += 1;
+//         }
+//         for (int j = 1; j <= size - i; ++j)
+//         {
+//             cout << ' ';
+//         }
+//         cout << endl;
+//     }
+// }
+// int main()
+// {
+//     number_pattern(5);
+//     return 0;
+// }
+// #include<iostream>
+// using namespace std;
+
+// void triangle(int size) {
+// 	for (int i = 1; i <= size; ++i) {
+// 		for (int j = 1; j <= i; ++j) {
+// 			cout << '*';
+// 		}
+// 		cout << endl;
+// 	}
+// }
+// int main() {
+//     triangle(5);
+//     return 0;
+// }
+
+
+// void L2Q11()
+// {
+// 	cout << setw(25) << "*** Patterns ***" << endl;
+// 	cout << "Pattern 1:\n";
+// 	L2Q11_diamond(9);
+// 	cout << "\nPattern 2:\n";
+// 	L2Q11_hollow_rectangle(5);
+// 	cout << "\nPattern 3:\n";
+// 	L2Q11_special_pattern(10);
+// 	cout << "\nPattern 4:\n";
+// 	L2Q11_number_pattern(5);
+// 	cout << "\nPattern 5:\n";
+// 	L2Q11_right_triangle(5);
+// }

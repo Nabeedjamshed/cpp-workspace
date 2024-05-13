@@ -1,27 +1,36 @@
 #include <iostream>
 using namespace std;
 
-int startL1() {
+int startL4()
+{
     cout << "\nName: Nabeed Ali (SE-23054)\n" << endl;
-    cout << "Lab 01\n" << endl;
+    cout << "Lab 04\n" << endl;
     return 0;
 }
-
-int L1Q8() {
-    int principal_amount, rate_of_interest, time_period, simple_interest;
-    cout << "Enter the value of principle amount: ";
-    cin >> principal_amount;
-    cout << "Enter the value of rate of interest: ";
-    cin >> rate_of_interest;
-    cout << "Enter the value of time period: ";
-    cin >> time_period;
-    simple_interest = (principal_amount * rate_of_interest * time_period) / 100;
-    cout << "Simple interest: " << simple_interest;
-    return 0;
+int* maximum(int a[], int size)
+{
+    int *max = &a[0];
+    for (int i = 0; i < size; i++)
+    {
+        if (*max < a[i])
+        {
+            max = &a[i];
+        }
+    }
+    return max;
 }
 int main()
 {
-    startL1();
-    L1Q8();
+    startL4();
+    int a[5];
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "Enter a number of an array: ";
+        cin >> a[i];
+    }
+    int size = int(sizeof(a) / sizeof(a[0]));
+    int *b = maximum(a, size);
+    cout << "The maximum value of an array is: " << *b << endl;
+    cout << "The adress of maximum value of an array is: " << b;
     return 0;
 }
