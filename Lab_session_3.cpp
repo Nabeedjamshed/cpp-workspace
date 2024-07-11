@@ -1,29 +1,29 @@
 // // LAB 03
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int startl3()
-// {
-//     cout << "\nName: Nabeed Ali (SE-23054)\n" << endl;
-//     cout << "Start of Lab 03\n" << endl;
-//     return 0;
-// }
-// struct Person
-// {
-//     string name;
-//     int age;
-// };
+int startl3()
+{
+    cout << "\nName: Nabeed Ali (SE-23054)\n" << endl;
+    cout << "Start of Lab 03\n" << endl;
+    return 0;
+}
+struct Person
+{
+    string name;
+    int age;
+};
 
-// int main()
-// {
-//     startl3();
-//     Person p;
-//     p.name = "Nabeed Ali";
-//     p.age = 19;
-//     cout << "Name: " << p.name << endl;
-//     cout << "Age: " << p.age << endl;
-//     return 0;
-// }
+int main()
+{
+    startl3();
+    Person p;
+    p.name = "Nabeed Ali";
+    p.age = 19;
+    cout << "Name: " << p.name << endl;
+    cout << "Age: " << p.age << endl;
+    return 0;
+}
 
 // LAB 03
 // #include <iostream>

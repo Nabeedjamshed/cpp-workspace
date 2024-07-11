@@ -1,27 +1,27 @@
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int startl2() {
-//     cout << "\nName: Nabeed Ali (SE-23054)\n" << endl;
-//     cout << "Start of Lab 02\n" << endl;
-//     return 0;
-// }
-// int main() {
-//     startl2();
-//     char c;
-//     cout << "Entre a character: ";
-//     cin >> c;
-//     if (int(c) >= 65 && int(c) <= 90){
-//         cout << "You entered Capital letter";
-//     } else if (int(c) >= 97 && int(c) <= 122) {
-//         cout << "You entered Small letter";
-//     } else if (int(c) >= 48 && int(c) <= 57) {
-//         cout << "You entered a digit";
-//     } else {
-//         cout << "You entered special symbol";
-//     }
-//     return 0;
-// }
+int startl2() {
+    cout << "\nName: Nabeed Ali (SE-23054)\n" << endl;
+    cout << "Start of Lab 02\n" << endl;
+    return 0;
+}
+int main() {
+    startl2();
+    char c;
+    cout << "Entre a character: ";
+    cin >> c;
+    if (int(c) >= 65 && int(c) <= 90){
+        cout << "You entered Capital letter";
+    } else if (int(c) >= 97 && int(c) <= 122) {
+        cout << "You entered Small letter";
+    } else if (int(c) >= 48 && int(c) <= 57) {
+        cout << "You entered a digit";
+    } else {
+        cout << "You entered special symbol";
+    }
+    return 0;
+}
 
 // #include <iostream>
 // using namespace std;

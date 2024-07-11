@@ -1,33 +1,33 @@
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int startl4()
-// {
-//     cout << "\nName: Nabeed Ali (SE-23054)\n" << endl;
-//     cout << "Start of Lab 04\n" << endl;
-//     return 0;
-// }
-// void swaap(int *p1, int *p2)
-// {
-//     int temp = *p1;
-//     *p1 = *p2;
-//     *p2 = temp;
-// }
-// int main()
-// {
-//     startl4();
-//     int a, b;
-//     cout << "Enter number 1: ";
-//     cin >> a;
-//     cout << "Enter number 2: ";
-//     cin >> b;
-//     int *ptr1 = &a;
-//     int *ptr2 = &b;
-//     cout << "Number before swaping " << *ptr1 << " and " << *ptr2 << endl;
-//     swaap(ptr1, ptr2);
-//     cout << "Number after swaping " << *ptr1 << " and " << *ptr2 << endl;
-//     return 0;
-// }
+int startl4()
+{
+    cout << "\nName: Nabeed Ali (SE-23054)\n" << endl;
+    cout << "Start of Lab 04\n" << endl;
+    return 0;
+}
+void swaap(int *p1, int *p2)
+{
+    int temp = *p1;
+    *p1 = *p2;
+    *p2 = temp;
+}
+int main()
+{
+    startl4();
+    int a, b;
+    cout << "Enter number 1: ";
+    cin >> a;
+    cout << "Enter number 2: ";
+    cin >> b;
+    int *ptr1 = &a;
+    int *ptr2 = &b;
+    cout << "Number before swaping " << *ptr1 << " and " << *ptr2 << endl;
+    swaap(ptr1, ptr2);
+    cout << "Number after swaping " << *ptr1 << " and " << *ptr2 << endl;
+    return 0;
+}
 
 // #include <iostream>
 // using namespace std;

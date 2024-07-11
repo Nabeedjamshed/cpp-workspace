@@ -88,7 +88,7 @@
 //     Circle c1(r);
 //     float ra = c1.calculate_radius();
 //     float cir = c1.cal_circumference();
-//     cout << "Radius: " << ra << endl;
+//     cout << "Area: " << ra << endl;
 //     cout << "Circumference: " << cir << endl;
 //     return 0;
 // }
@@ -258,74 +258,74 @@
 //     return 0;
 // }
 
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int startL6()
-// {
-//     cout << "\nName: Nabeed Ali (SE-23054)\n" << endl;
-//     cout << "Lab 06\n" << endl;
-//     return 0;
-// }
+int startL6()
+{
+    cout << "\nName: Nabeed Ali (SE-23054)\n" << endl;
+    cout << "Lab 06\n" << endl;
+    return 0;
+}
 
-// class Fraction
-// {
-//     private:
-//         int numerator, denominator;
+class Fraction
+{
+    private:
+        int numerator, denominator;
 
-//     public:
-//         Fraction(int numerator, int denominator)
-//         {
-//             this->numerator = numerator;
-//             this->denominator = denominator;
-//         }
+    public:
+        Fraction(int numerator, int denominator)
+        {
+            this->numerator = numerator;
+            this->denominator = denominator;
+        }
 
-//         int gcd(int a, int b)
-//         {
-//             while (b != 0)
-//             {
-//                 int temp = b;
-//                 b = a % b;
-//                 a = temp;
-//             }
-//             return a;
-//         }
+        int gcd(int a, int b)
+        {
+            while (b != 0)
+            {
+                int temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
 
-//         void calculation()
-//         {
-//             int divisor = gcd(numerator, denominator);
-//             numerator = numerator / divisor;
-//             denominator = denominator / divisor;
-//         }
+        void calculation()
+        {
+            int divisor = gcd(numerator, denominator);
+            numerator = numerator / divisor;
+            denominator = denominator / divisor;
+        }
 
-//         void display()
-//         {
-//             cout << "Simplified fraction is: " << numerator << "/" << denominator << endl;
-//         }
-//         void check()
-//         {
-//             if (denominator == 0)
-//             {
-//                 cout << "Denominator cannot be zero.";
-//             }
-//             else
-//             {
-//                 display();
-//             }
-//         }
-// };
+        void display()
+        {
+            cout << "Simplified fraction is: " << numerator << "/" << denominator << endl;
+        }
+        void check()
+        {
+            if (denominator == 0)
+            {
+                cout << "Denominator cannot be zero.";
+            }
+            else
+            {
+                display();
+            }
+        }
+};
 
-// int main()
-// {
-//     startL6();
-//     int n, d;
-//     cout << "Enter numerator: ";
-//     cin >> n;
-//     cout << "Enter denominator: ";
-//     cin >> d;
+int main()
+{
+    startL6();
+    int n, d;
+    cout << "Enter numerator: ";
+    cin >> n;
+    cout << "Enter denominator: ";
+    cin >> d;
 
-//     Fraction f(n, d);
-//     f.calculation();
-//     f.check();
-//     return 0;
-// }
+    Fraction f(n, d);
+    f.calculation();
+    f.check();
+    return 0;
+}

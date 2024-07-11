@@ -172,33 +172,33 @@ int startL1() {
     return 0;
 }
 
-int L1Q6() {
-    int number;
-    cout << "Enter a number: ";
-    cin >> number;
-    bool flag = 0;
-    if (number == 0 || number == 1)
-    {
-        cout << number << " is not prime.";
-    }
-    else
-    {
-        for (int i = 2; i <= sqrt(number); i++)
-        {
-            if (number % i == 0)
-            {
-                cout << number << " is not prime.";
-                flag = 1;
-                break;
-            }
-        }
-        if (flag == 0)
-        {
-            cout << number << " is prime.";
-        }
-    }
-    return 0;
-}
+// int L1Q6() {
+//     int number;
+//     cout << "Enter a number: ";
+//     cin >> number;
+//     bool flag = 0;
+//     if (number == 0 || number == 1)
+//     {
+//         cout << number << " is not prime.";
+//     }
+//     else
+//     {
+//         for (int i = 2; i <= sqrt(number); i++)
+//         {
+//             if (number % i == 0)
+//             {
+//                 cout << number << " is not prime.";
+//                 flag = 1;
+//                 break;
+//             }
+//         }
+//         if (flag == 0)
+//         {
+//             cout << number << " is prime.";
+//         }
+//     }
+//     return 0;
+// }
 int main()
 {
     startL1();

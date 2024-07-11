@@ -716,27 +716,56 @@
 // }
 
 
+// #include<iostream>
+// using namespace std;
+// struct employee
+// {
+//     string name;
+//     int eid;
+//     float salary;
+//     char favChar;
+// };
+// void setdata(employee e1){
+//     e1.eid = 12;
+//     e1.salary = 2423;
+//     e1.favChar = 'b';
+//     e1.name = "Nabeed";    
+//     cout<<"Name: "<<e1.name<<endl;
+//     cout<<"Student ID: "<<e1.eid<<endl;
+//     cout<<"Salary: "<<e1.salary<<endl;
+//     cout<<"Favourite character: "<<e1.favChar<<endl;
+
+// }
+// int main() {
+//     employee na;
+//     setdata(na);
+// }
+
+
+
 #include<iostream>
 using namespace std;
-struct employee
-{
-    string name;
-    int eid;
-    float salary;
-    char favChar;
-};
-void setdata(employee e1){
-    e1.eid = 12;
-    e1.salary = 2423;
-    e1.favChar = 'b';
-    e1.name = "Nabeed";    
-    cout<<"Name: "<<e1.name<<endl;
-    cout<<"Student ID: "<<e1.eid<<endl;
-    cout<<"Salary: "<<e1.salary<<endl;
-    cout<<"Favourite character: "<<e1.favChar<<endl;
 
-}
+class date{
+    private:
+        int days, month, year;
+    public:
+        date(int m,int d,int y){
+            days = d;
+            (y>2000 && y<2050) ? year : 2001;
+            (m > 0 && m < 13) ? month : 1;
+        }
+        void check(){
+            int arr[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+            int a = arr[month];
+            if (days == a)
+            {
+                cout<<days<<" : "<<month<<" : "<<year<<endl;
+            }  
+        }
+};
 int main() {
-    employee na;
-    setdata(na);
+    date d(2,28,2004);
+    d.check();
+    return 0;
 }

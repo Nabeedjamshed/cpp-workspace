@@ -11,7 +11,7 @@ class Demo
 public:
     void setdata()
     {
-        cout << "Enter value of a: ";
+        cout << "Enter value: ";
         cin >> a;
     }
     void getdata()
@@ -19,7 +19,25 @@ public:
         cout << "The value of a is: " << a << endl;
     }
 
-    Demo operator+(Demo bb)
+    Demo operator+(const Demo& bb)
+    {
+        Demo cc;
+        cc.a = a + bb.a; // a mai us object ka a ajaega jis ke reference se ye function call horha in this scnerio aa ka a yha aytomatically aajaega uske lie aa.a likhe ki need nhi hai.
+        return cc;
+    }
+    Demo operator-(const Demo& bb)
+    {
+        Demo cc;
+        cc.a = a - bb.a; // a mai us object ka a ajaega jis ke reference se ye function call horha in this scnerio aa ka a yha aytomatically aajaega uske lie aa.a likhe ki need nhi hai.
+        return cc;
+    }
+    Demo operator*(const Demo& bb)
+    {
+        Demo cc;
+        cc.a = a * bb.a; // a mai us object ka a ajaega jis ke reference se ye function call horha in this scnerio aa ka a yha aytomatically aajaega uske lie aa.a likhe ki need nhi hai.
+        return cc;
+    }
+    Demo add(const Demo& bb) // Also do thid, (p1+p2) * (p3-p2)
     {
         Demo cc;
         cc.a = a + bb.a; // a mai us object ka a ajaega jis ke reference se ye function call horha in this scnerio aa ka a yha aytomatically aajaega uske lie aa.a likhe ki need nhi hai.
@@ -35,5 +53,13 @@ int main()
     aa.getdata();
     bb.getdata();
     cc.getdata();
+
+    Demo d;
+    d = aa.add(bb);
+    d.getdata();
+
+
+    Demo x = (aa+bb) * (aa-cc);
+    x.getdata();
     return 0;
 }
